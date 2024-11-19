@@ -1,0 +1,73 @@
+/* Home.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for slide-in effect */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-content {
+  margin-top: 20%;
+  animation: fadeIn 2s ease-out;
+}
+
+.right-content img {
+  margin-top: -3%;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+h1, h5, p {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  color: #333;
+  animation: fadeIn 2s ease-out 1s; /* Delay for smooth appearance */
+}
+
+h5 {
+  font-weight: 400;
+  color: #555;
+  animation: fadeIn 2s ease-out 1.5s;
+}
+
+p {
+  font-weight: 400;
+  color: #666;
+  animation: fadeIn 2s ease-out 2s;
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-content {
+    text-align: center;
+  }
+}
